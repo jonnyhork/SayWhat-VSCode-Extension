@@ -11,7 +11,7 @@ export function activate(context: vscode.ExtensionContext) {
   console.log('Congratulations, your extension "saywhat" is now active!');
 
   let getMessage = vscode.commands.registerCommand(
-    "sayWhat.helloWorld",
+    "sayWhat.getMessage",
     async () => {
       // The code you place here will be executed every time your command is executed
       let message = await vscode.window.showInputBox();

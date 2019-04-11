@@ -11,12 +11,12 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:sayWhat.helloWorld"
+		"onCommand:sayWhat.getMessage"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
 		"commands": [{
-			"command": "sayWhat.helloWorld",
+			"command": "sayWhat.getMessage",
 			"title": "Say What?"
 		}]
 	},
