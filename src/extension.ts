@@ -20,11 +20,18 @@ export function activate(context: vscode.ExtensionContext) {
       return message;
     }
   );
+
+  let getMessageFn = async () => {
+    let message = await vscode.window.showInputBox();
+    console.log(message);
+
+    return message;
+  };
   // might need to add this in sayHi
   context.subscriptions.push(getMessage);
 
   let api: any = {
-    getMessage
+    getMessageFn
   };
   // 'export' public api-surface
   return api;
@@ -33,5 +40,4 @@ export function activate(context: vscode.ExtensionContext) {
 // this method is called when your extension is deactivated
 export function deactivate() {
   console.log("Say what is deactivated!");
-  
 }
