@@ -21,10 +21,17 @@ export function activate(context: vscode.ExtensionContext) {
     }
   );
   // might need to add this in sayHi
-  //context.subscriptions.push(getMessage);
+  context.subscriptions.push(getMessage);
 
-  return getMessage;
+  let api: any = {
+    getMessage
+  };
+  // 'export' public api-surface
+  return api;
 }
 
 // this method is called when your extension is deactivated
-export function deactivate() {}
+export function deactivate() {
+  console.log("Say what is deactivated!");
+  
+}
