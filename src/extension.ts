@@ -2,7 +2,10 @@
 import * as vscode from "vscode";
 
 export function activate(context: vscode.ExtensionContext) {
-  console.log('Congratulations, your extension "saywhat" is now active!');
+  const sayWhatExtension = vscode.extensions.getExtension("jh.sayhi")!;
+  console.log(
+    'Congratulations, your extension ----"SAY WHAT"---- is now active!'
+  );
 
   let getMessage = vscode.commands.registerCommand(
     "sayWhat.getMessage",
